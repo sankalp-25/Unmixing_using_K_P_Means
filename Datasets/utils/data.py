@@ -4,13 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.io as sio
 
-EPS=1e-6
+from . import EPS
+
 
 class HSI:
     def __init__(
         self,
         name: str,
-        data_dir: str = "./",
+        data_dir: str = "./Unmixing_Tutorial_IEEE_IADF/datasets/",
     ):
         path = os.path.join(data_dir, name)
         assert os.path.isfile(path)
